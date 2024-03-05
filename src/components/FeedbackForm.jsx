@@ -8,11 +8,11 @@ const FeedbackForm = () => {
   const [message, setMessage] = useState("");
 
   const handleTextChange = (e) => {
-    if(text === ''){
+    if(e.target.value === ''){
         setBtnDisabled(true);
         // message should only show if we have typed something and our text is less than 10 characters long.
         setMessage(null);
-    } else if (text !== '' && text.trim().length <= 10){
+    } else if (e.target.value !== '' && e.target.value.trim().length <= 10){
         setMessage("Please type more than 10 characters");
         setBtnDisabled(true);
     } else {
