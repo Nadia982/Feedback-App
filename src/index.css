@@ -182,7 +182,12 @@ opacity: 1;
 .message{
     padding-top: 1rem;
     text-align: center;
-    color: rebeccapurple;
+    color: #fff;  
+}
+
+.message.reverse{
+  
+  color: rebeccapurple;
 }
 
 .about-link {
@@ -209,6 +214,8 @@ opacity: 1;
 .about p {
     margin: 1rem 0;
 }
+
+
 
 @media (max-width: 600px) {
     .rating li {
