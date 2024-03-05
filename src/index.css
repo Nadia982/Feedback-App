@@ -71,6 +71,7 @@ ul {
     font-size: 1.2rem;
     border: 1px #eee solid;
     transition: 0.3s;
+    color: #000;
   }
   
   .rating li label {
@@ -88,7 +89,7 @@ ul {
   .rating li:hover,
   .num-display {
     background: #ff6a95;
-    color: #fff;
+    color: #000;
   }
   
   [type='radio'] {
@@ -97,7 +98,7 @@ ul {
   
   [type='radio']:checked ~ label {
     background: #ff6a95;
-    color: #fff;
+    color: #000;
   }
   
   .input-group {
