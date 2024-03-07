@@ -113,6 +113,7 @@ ul {
     flex-grow: 2;
     border: none;
     font-size: 16px;
+    /* padding: 0 10px; */
   }
   
   input:focus {
