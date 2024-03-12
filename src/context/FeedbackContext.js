@@ -9,8 +9,15 @@ const [feedback, setFeedback] = useState([
 }
 ]);
 
+const deleteFeedback = (id) => {
+    if (window.confirm("Are you sure you want to delete this feedback?")) {
+      setFeedback(feedback.filter((item) => item.id !== id));
+    }
+  };
+
 return <FeedbackContext.Provider value={{
     feedback,
+    deleteFeedback,
 }}>
     {children}
     </FeedbackContext.Provider>

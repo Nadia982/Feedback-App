@@ -18,11 +18,6 @@ function App() {
     newFeedback.id = uuidv4();
     setFeedback([newFeedback, ...feedback]);
   };
-  const deleteFeedback = (id) => {
-    if (window.confirm("Are you sure you want to delete this feedback?")) {
-      setFeedback(feedback.filter((item) => item.id !== id));
-    }
-  };
 
   return (
     <FeedbackProvider>
@@ -38,7 +33,7 @@ function App() {
                 <FeedbackForm handleAdd={addFeedback} />
                 {/* since feedback is our state, whenever that state changes, it'll automatically change within the feedback stats component. */}
                 <FeedbackStats />
-                <FeedbackList handleDelete={deleteFeedback}
+                <FeedbackList
                 />
               </>
             }

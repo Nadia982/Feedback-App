@@ -3,7 +3,7 @@ import {useContext} from "react";
 import FeedbackItem from "./FeedbackItem";
 import FeedbackContext from "../context/FeedbackContext";
 
-const FeedbackList = ({ handleDelete }) => {
+const FeedbackList = () => {
   const {feedback} = useContext(FeedbackContext);
 
   if (!feedback || feedback.length === 0) {
@@ -24,8 +24,7 @@ const FeedbackList = ({ handleDelete }) => {
             <FeedbackItem
               key={item.id}
               item={item}
-              handleDelete={handleDelete}
-            />
+             />
             {/* handleDelete is now a prop for FeedbackItem, and this needs to be caught in FeedbackItem */}
           </motion.div>
         ))}
