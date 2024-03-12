@@ -9,7 +9,7 @@ import FeedbackStats from "./components/FeedbackStats";
 import FeedbackForm from "./components/FeedbackForm";
 import AboutIconLink from "./components/AboutIconLink";
 import AboutPage from "./pages/AboutPage";
-
+import {FeedbackProvider} from './context/FeedbackContext';
 
 function App() {
   const [feedback, setFeedback] = useState(FeedbackData);
@@ -25,6 +25,7 @@ function App() {
   };
 
   return (
+    <FeedbackProvider>
     <Router>
       <Header />
       <div className="container">
@@ -36,10 +37,8 @@ function App() {
               <>
                 <FeedbackForm handleAdd={addFeedback} />
                 {/* since feedback is our state, whenever that state changes, it'll automatically change within the feedback stats component. */}
-                <FeedbackStats feedback={feedback} />
-                <FeedbackList
-                  feedback={feedback}
-                  handleDelete={deleteFeedback}
+                <FeedbackStats />
+                <FeedbackList handleDelete={deleteFeedback}
                 />
               </>
             }
@@ -58,6 +57,7 @@ function App() {
         <AboutIconLink/>
       </div>
     </Router>
+    </FeedbackProvider>
   );
 }
 
