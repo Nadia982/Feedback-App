@@ -1,17 +1,21 @@
-import {FaTimes} from 'react-icons/fa'
+import {FaTimes, FaEdit} from 'react-icons/fa'
 import {useContext} from 'react'
 import PropTypes from 'prop-types'
 import Card from '../components/shared/Card'
 import FeedbackContext from '../context/FeedbackContext'
 
+
 function FeedbackItem({item}) {
-  const {deleteFeedback} = useContext(FeedbackContext) 
+  const {deleteFeedback, editFeedback} = useContext(FeedbackContext) 
  //the data is now coming in as a prop, so we don't need useState
 
  return (
     <Card reverse={false}>
       <div className="num-display">{item.rating}</div>
       <button onClick={()=>deleteFeedback(item.id)} className="close"><FaTimes color="purple"/></button>
+      <button onClick={()=>editFeedback(item)} className="edit">
+        <FaEdit color="purple"/>
+      </button>
       <div className="text-display">{item.text}</div>
     </Card>
   );
