@@ -140,19 +140,23 @@ ul {
     top: -10px;
     left: -10px;
   }
+
+  .feedback-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
   .close,
   .edit {
-    position: absolute;
-    top: 1rem;
-    right: 1.5rem;
-    cursor: pointer;
+        cursor: pointer;
     background: none;
     border: none;
+    font-size: 2rem;
   }
   
   .edit {
-    right: 40px;
+    margin-right: 1rem;
   }
   
   .btn {
