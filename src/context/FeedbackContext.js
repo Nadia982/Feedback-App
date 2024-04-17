@@ -48,7 +48,10 @@ return <FeedbackContext.Provider value={{
     feedback,
     deleteFeedback,
     addFeedback,
-    editFeedback
+    // editFeedback is the function that runs when we click the edit button 
+    editFeedback, 
+    // feedbackEdit is the piece of state that holds the feedback item and the boolean ('edit: true' or 'edit: false')).
+    feedbackEdit
 }}>
     {children}
     </FeedbackContext.Provider>

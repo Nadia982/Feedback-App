@@ -1,4 +1,4 @@
-import { useState, useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import RatingSelect from "./RatingSelect";
 import Card from "./shared/Card";
 import Button from "./shared/Button";
@@ -10,7 +10,16 @@ const FeedbackForm = () => {
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [message, setMessage] = useState("");
 
-  const {addFeedback} = useContext(FeedbackContext)
+  const {addFeedback, feedbackEdit} = useContext(FeedbackContext)
+
+  useEffect(()=>{
+    if (feedbackEdit.edit === true){
+      setBtnDisabled(false)
+      setText(feedbackEdit.item.text)
+      setRating(feedbackEdit.item.rating)
+    }
+  }, [feedbackEdit])
+  // adding feedbackEdit as a dependency in the line above means that this effect will run whenever we click on any of the feedbackEdit buttons.
 
   const handleTextChange = (e) => {
     if (e.target.value === "") {
