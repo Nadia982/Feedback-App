@@ -58,8 +58,7 @@ return <FeedbackContext.Provider value={{
     addFeedback,
     // editFeedback is the function that runs when we click the edit button 
     editFeedback, 
-    updateFeedback, 
-
+    updateFeedback
 }}>
     {children}
     </FeedbackContext.Provider>

@@ -19,7 +19,8 @@ const FeedbackForm = () => {
       setRating(feedbackEdit.item.rating)
     }
   }, [feedbackEdit])
-  // adding feedbackEdit as a dependency in the line above means that this effect will run whenever we click on any of the feedbackEdit buttons.
+  // adding feedbackEdit as a dependency in the line above means that this effect will run whenever we click on 
+  // any of the feedbackEdit buttons.
 
   const handleTextChange = (e) => {
     if (e.target.value === "") {
@@ -48,7 +49,6 @@ const FeedbackForm = () => {
         } else {
           addFeedback(newFeedback);
         }
-        addFeedback(newFeedback);
         setText("");
     }
   };
