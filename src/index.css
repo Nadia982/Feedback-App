@@ -43,6 +43,7 @@ ul {
     padding: 40px 50px;
     margin: 20px 0;
     position: relative;
+    min-height: 350px;
   }
   
   .card.reverse {
@@ -92,6 +93,7 @@ ul {
   
   .rating li:hover,
   .num-display {
+    /* background: blue; */
     background: #ff6a95;
     color: #000;
   }
